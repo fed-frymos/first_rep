@@ -11,14 +11,15 @@ body{
   .block1{
     display: flex;
     justify-content: space-around;
-    position: absolute; 
+    /* position: relative; */
+    margin: auto; 
     width: 100%;
     max-width: 1170px; 
     height: 80px; 
     background-color: #ffffff;
-    margin: center;
     text-align: center;
     align-items: center;
+
   }
   .web {
     font-family: Raleway;
@@ -28,13 +29,15 @@ body{
     line-height: 31px;
     letter-spacing: 0.03em;
     color: #2196F3;
+    margin: 0 25px 0 25px;
   }
   .studio {
     color: #000000;  
   }
   .menu {
+    position: relative;
+    margin: auto; 
     display: flex;
-    /*justify-content: space-around;*/
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -53,21 +56,26 @@ body{
     color: #757575;
   }
   .center1 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 1600px;
-    height: 600px;
-    /*left: 0px;*/
+    height: 600px; 
     top: 80px;
     background: #2F303A;
+  }
+    .center1_text {
+    
     font-style: normal; 
     font-weight: 900; 
     font-size: 44px;
     line-height: 60px;
     text-align: center;
-    padding-top: 200px;
     letter-spacing: 0.06em; 
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: auto;
-    
+    margin: auto;    
+      
   }
