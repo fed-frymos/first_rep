@@ -10,9 +10,13 @@
 // Ниже приведен список стран и стоимость доставки.
 // Китай - 150 кредитов Чили - 250 кредитов Австралия - 165 кредитов 
 // Индия - 90 кредитов Ямайка - 130 кредитов
-let strana = prompt('ВВедите страну доставки:').toUpperCase();
+let strana = prompt('ВВедите страну доставки:');
 console.log(strana);
 let price;
+if (strana===null) {
+    alert('отменено пользователем')
+    
+} else {strana=strana.toUpperCase();
 switch (strana) {
     case 'КИТАЙ':
         price = 150;
@@ -24,17 +28,18 @@ switch (strana) {
         break;
     case 'АВСТРАЛИЯ':
         price = 165;
-        console.log('Доставка в ' + strana + ' будет стоить ' + price + ' кредитов');
+        console.log('Доставка в ' + strana.substr(0,8) + 'Ю будет стоить ' + price + ' кредитов');
         break;
     case 'ИНДИЯ':
         price = 90;
-        console.log('Доставка в ' + strana + ' будет стоить ' + price + ' кредитов');
+        console.log('Доставка в ' + strana.substr(0, 4) + 'Ю будет стоить ' + price + ' кредитов');
         break;
     case 'ЯМАЙКА':
         price = 130;
-        console.log('Доставка в ' + strana + ' будет стоить ' + price + ' кредитов');
+        console.log('Доставка на ' + strana.substr(0, 5) + 'У будет стоить ' + price + ' кредитов');
         break;
     default:
         alert('В вашей стране доставка не доступна');
         break;
+}
 }
