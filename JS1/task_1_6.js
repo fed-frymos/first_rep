@@ -15,4 +15,21 @@
 // let input; 
 // let total = 0; (edited) 
 let input; 
-let total = 0; (edited)
+let total = 0; 
+input = prompt("vvedi 4islo:");
+console.log("peremennaya: ", input);
+input = Number(input);
+//console.log("tip peremennoy: ", typeof input);
+
+for (total=input; input!=null; total+=Number(input)) {
+//console.log(input);
+console.log("vsego: ", total);
+input = prompt("vvedi 4islo:");
+console.log("tip peremennoy: ", typeof input);
+console.log(input);
+if (input===null) {
+    alert("Общая сумма чисел равна " + total); 
+    console.log("peremen", input);
+}
+
+}  
