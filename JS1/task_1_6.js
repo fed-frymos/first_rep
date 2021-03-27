@@ -16,20 +16,29 @@
 // let total = 0; (edited) 
 let input; 
 let total = 0; 
-input = prompt("vvedi 4islo:");
-console.log("peremennaya: ", input);
-input = Number(input);
-//console.log("tip peremennoy: ", typeof input);
 
-for (total=input; input!=null; total+=Number(input)) {
-//console.log(input);
-console.log("vsego: ", total);
-input = prompt("vvedi 4islo:");
-console.log("tip peremennoy: ", typeof input);
-console.log(input);
-if (input===null) {
-    alert("Общая сумма чисел равна " + total); 
-    console.log("peremen", input);
-}
+for (let i=0; i<=1; i+=1) {
+    input = prompt("Введите число:");
+    
+    if (input===null) {
+    alert(`Общая сумма чисел равна: ${total}`); 
+    //console.log("переменная:", input);
+    } else {
+      input = Number(input);
+      if (isNaN(input)) {  
+        i-=1;    
+        alert("Было введено не число, попробуйте еще раз");
+        
+      } else {  
+        i-=1;
+        total += input;
+      
+      }
+    }   
+  
+//   console.log(input);
+//   console.log("тип переменной: ", typeof input);
+//   console.log("всего: ", total);
 
 }  
+
